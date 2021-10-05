@@ -1,0 +1,347 @@
+
+#topbar {
+    width: 100%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+    color: rgb(99, 96, 96);
+}
+
+#left-menu {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#logo>a {
+    text-decoration: none;
+    color: #009688;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 16px;
+}
+
+#logo span {
+    font-weight: 800;
+}
+
+#left-menu>a {
+    text-decoration: none;
+    color: black;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#left-menu>a:hover {
+    color: #009688;
+}
+
+#search-wrapper {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+#search-wrapper>i {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+#search-box {
+    width: 100%;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+    font-size: 17px;
+}
+
+#right-menu {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#cart-wrapper {
+    position: relative;
+    margin-right: 32px;
+}
+
+#cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-wrapper>a {
+    text-decoration: none;
+    color: black;
+}
+
+#cart-wrapper i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#user_avatar {
+    font-size: 22px;
+    cursor: pointer;
+    color: #009688;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(27, 25, 25);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* BURGER STYLE */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#edyoda-projects-logo {
+    width: 130px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+
+/* NAVBAR RESPONSIVE STYLE */
+
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 89vh;
+        top: 10.4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        background: #009688;
+        z-index: 100;
+    }
+    .nav-links li {
+        opacity: 1;
+        margin-top: 100px;
+    }
+    .nav-links li a {
+        color: rgb(27, 25, 25);
+    }
+    .nav-links li a:hover {
+        color: #fff;
+    }
+    .burger {
+        display: block;
+    }
+}
+#product-data{
+    margin: 120px 80px;
+
+}
+#product-grid{
+    display: flex;
+    flex-direction: column;
+}
+#clothing-section{
+    display: flex;
+    flex-direction: row;
+    
+}
+#accesory-section{
+    display: flex;
+    flex-direction: row;
+}
+#top-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+#product-image{
+    height: 350px;
+    width: 250px;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 1px 0px 1px rgb(233, 226, 226);
+}
+#product-desc{
+    height: 130px;
+    padding: 20px 40px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 1px 1px rgb(233, 226, 226);
+}
+#product-name{
+    font-size: 15px;
+}
+#product-brand{
+   font-size: 12px;
+}
+#product-price{
+    color: #0a3531;
+    font-size: 12px;
+}
+/* Product Section */
+#product-data1{
+    margin: 100px 0px;
+}
+@media screen and (max-width: 400px){
+    #top-section{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+    #clothing-section{
+        display: flex;
+        flex-direction: column;   
+    }
+    #accesory-section{
+        display: flex;
+        flex-direction: column;
+    }
+    #cloth-title{
+        font-size: 15px;
+    }
+    #accessory-title{
+        font-size: 15px;
+    }
+    #product-desc{
+        height: 130px;
+        width: 250px;
+        padding: 10px 20px;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 0px 0px 1px 1px rgb(233, 226, 226);
+    }
+    #product-name{
+        font-size: 12px;
+    }
+    #product-brand{
+       font-size: 10px;
+    }
+    #product-price{
+        color: #0a3531;
+        font-size: 10px;
+    }
+    #product-data1{
+        margin: 10px 0px;
+    }
+
+}
+
+
+/* Footer Style Start  */
+
+footer {
+    background-color: black;
+    height: 180px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer ul li {
+    list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+footer ul li a,
+footer ul li {
+    text-decoration: none;
+    color: #b8b8b8;
+    font-size: 12px;
+}
+
+footer ul li a:hover,
+footer ul li:hover {
+    color: #009688;
+}
+
+footer ul li h3 {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+    footer ul {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    footer ul {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Footer Style End  */
+
